@@ -4,6 +4,7 @@ import br.com.videoexpress.filmeseseries.dto.categories.CategoryDTO;
 import br.com.videoexpress.filmeseseries.entities.categories.CategoryEntity;
 import br.com.videoexpress.filmeseseries.exceptions.NotFoundException;
 import br.com.videoexpress.filmeseseries.repositories.categories.CategoryRepository;
+import jakarta.persistence.EntityNotFoundException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -50,5 +51,17 @@ public class CategoryService {
         entity.setName(dto.getName());
         entity = categoryRepository.save(entity);
         return new CategoryDTO(entity);
+    }
+
+    @Transactional
+    public CategoryDTO update(Long id, CategoryDTO dto) {
+        try {
+            CategoryEntity entity = categoryRepository.getReferenceById(id);
+            entity.setName(dto.getName());
+            entity = categoryRepository.save(entity);
+            return new CategoryDTO(entity);
+        } catch (EntityNotFoundException e) {
+            throw new NotFoundException("Id not found " + id);
+        }
     }
 }
