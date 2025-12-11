@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="09bcf2d7-e391-4d2c-88f4-40794db2ba78" name="Changes" comment="atualizando com transational">
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/br/com/videoexpress/filmeseseries/dto/categories/CategoryDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/br/com/videoexpress/filmeseseries/exceptions/NotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/br/com/videoexpress/filmeseseries/exceptions/ResourceExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/br/com/videoexpress/filmeseseries/exceptions/StandardError.java" afterDir="false" />
+    <list default="true" id="09bcf2d7-e391-4d2c-88f4-40794db2ba78" name="Changes" comment="Inclusão de novas classes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/br/com/videoexpress/filmeseseries/controllers/categories/CategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/br/com/videoexpress/filmeseseries/controllers/categories/CategoryController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/br/com/videoexpress/filmeseseries/services/categories/CategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/br/com/videoexpress/filmeseseries/services/categories/CategoryService.java" afterDir="false" />
@@ -101,7 +97,7 @@
       <workItem from="1765246001667" duration="82000" />
       <workItem from="1765246141824" duration="59000" />
       <workItem from="1765328019195" duration="1285000" />
-      <workItem from="1765381822748" duration="3157000" />
+      <workItem from="1765381822748" duration="4366000" />
     </task>
     <task id="LOCAL-00001" summary="Created packages controller and entity">
       <option name="closed" value="true" />
@@ -119,7 +115,15 @@
       <option name="project" value="LOCAL" />
       <updated>1765383624365</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Inclusão de novas classes">
+      <option name="closed" value="true" />
+      <created>1765419325393</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1765419325393</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -128,6 +132,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Created packages controller and entity" />
     <MESSAGE value="atualizando com transational" />
-    <option name="LAST_COMMIT_MESSAGE" value="atualizando com transational" />
+    <MESSAGE value="Inclusão de novas classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Inclusão de novas classes" />
   </component>
 </project>
