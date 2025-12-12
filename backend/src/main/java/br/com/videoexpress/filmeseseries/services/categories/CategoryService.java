@@ -7,13 +7,13 @@ import br.com.videoexpress.filmeseseries.exceptions.NotFoundException;
 import br.com.videoexpress.filmeseseries.repositories.categories.CategoryRepository;
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.dao.DataIntegrityViolationException;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
 
 @Service
 public class CategoryService {
@@ -25,20 +25,10 @@ public class CategoryService {
     }
 
     @Transactional(readOnly = true)
-    public List<CategoryDTO> findAll() {
-        List<CategoryEntity> list = categoryRepository.findAll();
+    public Page<CategoryDTO> findAllPaged(PageRequest pageRequest) {
+        Page<CategoryEntity> list = categoryRepository.findAll(pageRequest);
 
-//        // Exemplo para percorrer uma lista de DTO
-//        List<CategoryDTO> listDTO = new ArrayList<>();
-//        for (CategoryEntity cat : list) {
-//            listDTO.add(new CategoryDTO(cat));
-//        }
-//
-//        return listDTO;
-
-        // Utilizando com expressão lambda
-//        return list.stream().map(x -> new CategoryDTO(x)).collect(Collectors.toList());
-        return list.stream().map(CategoryDTO::new).collect(Collectors.toList());
+        return list.map(CategoryDTO::new);
     }
 
     @Transactional(readOnly = true)
