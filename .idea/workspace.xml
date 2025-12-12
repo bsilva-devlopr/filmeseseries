@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="09bcf2d7-e391-4d2c-88f4-40794db2ba78" name="Changes" comment="Delete category">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="09bcf2d7-e391-4d2c-88f4-40794db2ba78" name="Changes" comment="Delete category" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -96,7 +94,7 @@
       <workItem from="1765246141824" duration="59000" />
       <workItem from="1765328019195" duration="1285000" />
       <workItem from="1765381822748" duration="4366000" />
-      <workItem from="1765467007851" duration="1995000" />
+      <workItem from="1765467007851" duration="2581000" />
     </task>
     <task id="LOCAL-00001" summary="Created packages controller and entity">
       <option name="closed" value="true" />
