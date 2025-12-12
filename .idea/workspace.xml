@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="09bcf2d7-e391-4d2c-88f4-40794db2ba78" name="Changes" comment="Update category">
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/br/com/videoexpress/filmeseseries/exceptions/DatabaseException.java" afterDir="false" />
+    <list default="true" id="09bcf2d7-e391-4d2c-88f4-40794db2ba78" name="Changes" comment="Delete category">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/br/com/videoexpress/filmeseseries/controllers/categories/CategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/br/com/videoexpress/filmeseseries/controllers/categories/CategoryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/br/com/videoexpress/filmeseseries/exceptions/ResourceExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/br/com/videoexpress/filmeseseries/exceptions/ResourceExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/br/com/videoexpress/filmeseseries/services/categories/CategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/br/com/videoexpress/filmeseseries/services/categories/CategoryService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +96,7 @@
       <workItem from="1765246141824" duration="59000" />
       <workItem from="1765328019195" duration="1285000" />
       <workItem from="1765381822748" duration="4366000" />
-      <workItem from="1765467007851" duration="1309000" />
+      <workItem from="1765467007851" duration="1995000" />
     </task>
     <task id="LOCAL-00001" summary="Created packages controller and entity">
       <option name="closed" value="true" />
@@ -134,7 +130,15 @@
       <option name="project" value="LOCAL" />
       <updated>1765469558789</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Delete category">
+      <option name="closed" value="true" />
+      <created>1765472309256</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1765472309256</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -145,6 +149,7 @@
     <MESSAGE value="atualizando com transational" />
     <MESSAGE value="Inclusão de novas classes" />
     <MESSAGE value="Update category" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update category" />
+    <MESSAGE value="Delete category" />
+    <option name="LAST_COMMIT_MESSAGE" value="Delete category" />
   </component>
 </project>

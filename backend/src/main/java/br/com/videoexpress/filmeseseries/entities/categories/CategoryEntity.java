@@ -1,21 +1,41 @@
 package br.com.videoexpress.filmeseseries.entities.categories;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.io.Serializable;
+import java.time.Instant;
 
-@Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
 @Table(name = "tb_category")
+@Getter
+@Setter
 public class CategoryEntity implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
+
+    @Column(columnDefinition = "TIMESTAMP WITHOUT TIME ZONE")
+    @Setter(AccessLevel.NONE)
+    private Instant createdAt;
+
+    @Column(columnDefinition = "TIMESTAMP WITHOUT TIME ZONE")
+    @Setter(AccessLevel.NONE)
+    private Instant updatedAt;
+
+    // Quando criar pela primeira vez, será inserido a data
+    @PrePersist
+    public void prePersist() {
+        createdAt = Instant.now();
+    }
+
+    // Quando for atualizar e clicar em save, a data será atualizada
+    @PreUpdate
+    public void preUpdate() {
+        updatedAt = Instant.now();
+    }
 }
