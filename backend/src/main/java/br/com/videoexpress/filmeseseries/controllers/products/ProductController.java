@@ -3,8 +3,7 @@ package br.com.videoexpress.filmeseseries.controllers.products;
 import br.com.videoexpress.filmeseseries.dto.products.ProductDTO;
 import br.com.videoexpress.filmeseseries.services.products.ProductService;
 import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Sort;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
@@ -22,15 +21,8 @@ public class ProductController {
     }
 
     @GetMapping
-    public ResponseEntity<Page<ProductDTO>> findAll(
-            @RequestParam(value = "page", defaultValue = "0") Integer page,
-            @RequestParam(value = "linesPerPage", defaultValue = "12") Integer linesPerPage,
-            @RequestParam(value = "direction", defaultValue = "ASC") String direction,
-//            @RequestParam(value = "orderBy", defaultValue = "moment") String orderBy
-            @RequestParam(value = "orderBy", defaultValue = "name") String orderBy
-    ) {
-        PageRequest pageRequest = PageRequest.of(page, linesPerPage, Sort.Direction.valueOf(direction), orderBy);
-        Page<ProductDTO> list = productService.findAllPaged(pageRequest);
+    public ResponseEntity<Page<ProductDTO>> findAll(Pageable pageable) {
+        Page<ProductDTO> list = productService.findAllPaged(pageable);
         return ResponseEntity.ok().body(list);
     }
 
