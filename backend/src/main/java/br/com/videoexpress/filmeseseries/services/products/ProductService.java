@@ -1,9 +1,12 @@
 package br.com.videoexpress.filmeseseries.services.products;
 
+import br.com.videoexpress.filmeseseries.dto.categories.CategoryDTO;
 import br.com.videoexpress.filmeseseries.dto.products.ProductDTO;
+import br.com.videoexpress.filmeseseries.entities.categories.CategoryEntity;
 import br.com.videoexpress.filmeseseries.entities.products.ProductEntity;
 import br.com.videoexpress.filmeseseries.exceptions.DatabaseException;
 import br.com.videoexpress.filmeseseries.exceptions.NotFoundException;
+import br.com.videoexpress.filmeseseries.repositories.categories.CategoryRepository;
 import br.com.videoexpress.filmeseseries.repositories.products.ProductRepository;
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.dao.DataIntegrityViolationException;
@@ -19,9 +22,14 @@ import java.util.Optional;
 public class ProductService {
 
     private final ProductRepository productRepository;
+    private final CategoryRepository categoryRepository;
 
-    public ProductService(ProductRepository productRepository) {
+    public ProductService(
+            ProductRepository productRepository,
+            CategoryRepository categoryRepository
+    ) {
         this.productRepository = productRepository;
+        this.categoryRepository = categoryRepository;
     }
 
     @Transactional(readOnly = true)
@@ -41,7 +49,7 @@ public class ProductService {
     @Transactional
     public ProductDTO insert(ProductDTO dto) {
         ProductEntity entity = new ProductEntity();
-//        entity.setName(dto.getName());
+        copyDtoToEntity(dto, entity);
         entity = productRepository.save(entity);
         return new ProductDTO(entity);
     }
@@ -50,7 +58,7 @@ public class ProductService {
     public ProductDTO update(Long id, ProductDTO dto) {
         try {
             ProductEntity entity = productRepository.getReferenceById(id);
-//            entity.setName(dto.getName());
+            copyDtoToEntity(dto, entity);
             entity = productRepository.save(entity);
             return new ProductDTO(entity);
         } catch (EntityNotFoundException e) {
@@ -67,6 +75,20 @@ public class ProductService {
             productRepository.deleteById(id);
         } catch (DataIntegrityViolationException e) {
             throw new DatabaseException("Falha de integridade referencial");
+        }
+    }
+
+    private void copyDtoToEntity(ProductDTO dto, ProductEntity entity) {
+        entity.setName(dto.getName());
+        entity.setDescription(dto.getDescription());
+        entity.setDate(dto.getDate());
+        entity.setImgUrl(dto.getImgUrl());
+        entity.setPrice(dto.getPrice());
+
+        entity.getCategories().clear();
+        for (CategoryDTO catDTO : dto.getCategories()) {
+            CategoryEntity category = categoryRepository.getReferenceById(catDTO.getId());
+            entity.getCategories().add(category);
         }
     }
 }
