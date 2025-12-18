@@ -39,11 +39,26 @@ class ProductRepositoryTests {
     }
 
     @Test
-    void deleteShouldDeleteObjectWhenIdExists() {
+    public void deleteShouldDeleteObjectWhenIdExists() {
 
         productRepository.deleteById(exintingId);
 
         Optional<ProductEntity> result = productRepository.findById(exintingId);
         Assertions.assertFalse(result.isPresent());
     }
+
+    @Test
+    public void findByIdShouldReturnOptionalNotEmptyWhenIdExists() {
+        Optional<ProductEntity> result = productRepository.findById(exintingId);
+
+        Assertions.assertTrue(result.isPresent());
+    }
+
+    @Test
+    public void findByIdShouldReturnOptionalEmptyWhenIdDoesNotExist() {
+        Optional<ProductEntity> result = productRepository.findById(nonExistingId);
+
+        Assertions.assertTrue(result.isEmpty());
+    }
+
 }

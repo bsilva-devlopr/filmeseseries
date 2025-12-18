@@ -10,7 +10,8 @@ import java.time.Instant;
 import java.util.HashSet;
 import java.util.Set;
 
-@Data
+@Getter
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
@@ -51,5 +52,18 @@ public class ProductEntity implements Serializable {
     @Getter
     @Setter(AccessLevel.NONE)
     Set<CategoryEntity> categories = new HashSet<>();
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof ProductEntity)) return false;
+        ProductEntity other = (ProductEntity) o;
+        return id != null && id.equals(other.id);
+    }
+
+    @Override
+    public int hashCode() {
+        return getClass().hashCode();
+    }
 
 }

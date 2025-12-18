@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="09bcf2d7-e391-4d2c-88f4-40794db2ba78" name="Changes" comment="refactor pageable">
-      <change afterPath="$PROJECT_DIR$/backend/src/test/java/br/com/videoexpress/filmeseseries/repositories/ProductRepositoryTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/test/java/br/com/videoexpress/filmeseseries/tests/Factory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/br/com/videoexpress/filmeseseries/entities/categories/CategoryEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/br/com/videoexpress/filmeseseries/entities/categories/CategoryEntity.java" afterDir="false" />
-    </list>
+    <list default="true" id="09bcf2d7-e391-4d2c-88f4-40794db2ba78" name="Changes" comment="implantação dos testes com junit" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -102,7 +97,7 @@
       <workItem from="1765467007851" duration="2581000" />
       <workItem from="1765546567407" duration="237000" />
       <workItem from="1765587248627" duration="5310000" />
-      <workItem from="1765979764284" duration="1225000" />
+      <workItem from="1765979764284" duration="1851000" />
     </task>
     <task id="LOCAL-00001" summary="Created packages controller and entity">
       <option name="closed" value="true" />
@@ -176,7 +171,15 @@
       <option name="project" value="LOCAL" />
       <updated>1765670112493</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="implantação dos testes com junit">
+      <option name="closed" value="true" />
+      <created>1766022613942</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1766022613942</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -192,6 +195,7 @@
     <MESSAGE value="Other class products" />
     <MESSAGE value="update class ProductService" />
     <MESSAGE value="refactor pageable" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor pageable" />
+    <MESSAGE value="implantação dos testes com junit" />
+    <option name="LAST_COMMIT_MESSAGE" value="implantação dos testes com junit" />
   </component>
 </project>
