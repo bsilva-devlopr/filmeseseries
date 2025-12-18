@@ -27,6 +27,11 @@ public class CategoryEntity implements Serializable {
     @Setter(AccessLevel.NONE)
     private Instant updatedAt;
 
+    public CategoryEntity(long id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
     // Quando criar pela primeira vez, será inserido a data
     @PrePersist
     public void prePersist() {

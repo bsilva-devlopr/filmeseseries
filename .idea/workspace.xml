@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="09bcf2d7-e391-4d2c-88f4-40794db2ba78" name="Changes" comment="update class ProductService">
+    <list default="true" id="09bcf2d7-e391-4d2c-88f4-40794db2ba78" name="Changes" comment="refactor pageable">
+      <change afterPath="$PROJECT_DIR$/backend/src/test/java/br/com/videoexpress/filmeseseries/repositories/ProductRepositoryTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/test/java/br/com/videoexpress/filmeseseries/tests/Factory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/br/com/videoexpress/filmeseseries/FilmeseseriesApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/br/com/videoexpress/filmeseseries/FilmeseseriesApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/br/com/videoexpress/filmeseseries/controllers/categories/CategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/br/com/videoexpress/filmeseseries/controllers/categories/CategoryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/br/com/videoexpress/filmeseseries/controllers/products/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/br/com/videoexpress/filmeseseries/controllers/products/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/br/com/videoexpress/filmeseseries/services/categories/CategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/br/com/videoexpress/filmeseseries/services/categories/CategoryService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/br/com/videoexpress/filmeseseries/services/products/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/br/com/videoexpress/filmeseseries/services/products/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/br/com/videoexpress/filmeseseries/entities/categories/CategoryEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/br/com/videoexpress/filmeseseries/entities/categories/CategoryEntity.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,8 +82,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.28238.7" />
-        <option value="bundled-js-predefined-d6986cc7102b-a71380e98a7c-JavaScript-IU-252.28238.7" />
+        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.28539.13" />
+        <option value="bundled-js-predefined-d6986cc7102b-a71380e98a7c-JavaScript-IU-252.28539.13" />
       </set>
     </attachedChunks>
   </component>
@@ -103,7 +101,8 @@
       <workItem from="1765381822748" duration="4366000" />
       <workItem from="1765467007851" duration="2581000" />
       <workItem from="1765546567407" duration="237000" />
-      <workItem from="1765587248627" duration="2808000" />
+      <workItem from="1765587248627" duration="5310000" />
+      <workItem from="1765979764284" duration="1225000" />
     </task>
     <task id="LOCAL-00001" summary="Created packages controller and entity">
       <option name="closed" value="true" />
@@ -169,7 +168,15 @@
       <option name="project" value="LOCAL" />
       <updated>1765668969402</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="refactor pageable">
+      <option name="closed" value="true" />
+      <created>1765670112493</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1765670112493</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -184,6 +191,7 @@
     <MESSAGE value="Created Products" />
     <MESSAGE value="Other class products" />
     <MESSAGE value="update class ProductService" />
-    <option name="LAST_COMMIT_MESSAGE" value="update class ProductService" />
+    <MESSAGE value="refactor pageable" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor pageable" />
   </component>
 </project>
